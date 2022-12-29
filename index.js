@@ -25,3 +25,30 @@ hexInput.addEventListener('keyup', () => {
 
   inputColor.style.backgroundColor = "#" + strippedHex
 })
+
+// Convert hex to rgb
+// This needs to work with 3 or 6 character hex values
+// use parseInt("", 16) to convert a hex value to a decimal value
+// Should return an object with 3 properties - r, g, and b
+// Hex values are 0-9 a-f in format rr gg bb. rgb values are 0-255
+
+const convertHexToRGB = (hex) => {
+  if (!isValidHex(hex)) return null
+
+  let strippedHex = hex.replace("#", "")
+
+  if (strippedHex.length === 3) {
+    strippedHex = strippedHex[0] + strippedHex[0]
+      + strippedHex[1] + strippedHex[1]
+      + strippedHex[2] + strippedHex[2]
+  }
+  
+  // Convert each hex value pair into rgb decimal values
+  const r = parseInt(strippedHex.substring(0, 2), 16) // first 2 values of hex
+  const g = parseInt(strippedHex.substring(2, 4), 16)
+  const b = parseInt(strippedHex.substring(4, 6), 16)
+  
+  return {r, g, b} // shorthand of {r:r, g:g, b:b}
+}
+
+console.log(convertHexToRGB("fff"))
