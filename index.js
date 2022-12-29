@@ -66,7 +66,7 @@ const convertRGBToHex = (r, g, b) => {
   const hex =  `#${hexR}${hexG}${hexB}`
   return hex
 }
-console.log(convertRGBToHex(255, 255, 255))
+
 
 // Display Percentage from Slider
 // Get reference to slider and sliderText DOM elements
@@ -75,9 +75,21 @@ console.log(convertRGBToHex(255, 255, 255))
 
 const slider = document.getElementById("slider")
 const sliderText = document.getElementById("sliderText")
+const alteredColor = document.getElementById("alteredColor")
+const alteredColorText = document.getElementById("alteredColorText")
 
 slider.addEventListener('input', () => {
+
+  // Check if hex is valid
+  if (!isValidHex(hexInput.value)) return 
+
   sliderText.textContent = `${slider.value}%`
+
+  // Get the altered hex value
+  const alteredHex = alterColor(hexInput.value, slider.value) 
+  // Update the altered color
+  alteredColor.style.backgroundColor = alteredHex
+  alteredColorText.innerText = `Altered Color ${alteredHex}`
 })
 
 // Alter color by percentage
@@ -99,12 +111,10 @@ const alterColor = (hex, percentage) => {
 }
 
 const increaseWithinRange = (hex, amount) => {
-  const newHex = hex + amount
-  if (newHex > 255) return 255
-  if (newHex < 0) return 0
+  // const newHex = hex + amount
+  // if (newHex > 255) return 255
+  // if (newHex < 0) return 0
 
   // one-liner
-  // return Math.min(255, Math.max(0, hex + amount))
+  return Math.min(255, Math.max(0, hex + amount))
 }
-
-console.log(alterColor('000', 10)) 
