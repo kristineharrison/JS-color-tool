@@ -92,10 +92,19 @@ const alterColor = (hex, percentage) => {
   const amount = Math.floor((percentage/100) * 255) // Get integer between 0-255
 
   // Create new RGB value by new amount
-  const newR = r + amount
-  const newG = g + amount
-  const newB = b + amount
+  const newR = increaseWithinRange(r, amount)
+  const newG = increaseWithinRange(g, amount)
+  const newB = increaseWithinRange(b, amount)
   return convertRGBToHex(newR, newG, newB)
 }
 
-console.log(alterColor('000', 10))
+const increaseWithinRange = (hex, amount) => {
+  const newHex = hex + amount
+  if (newHex > 255) return 255
+  if (newHex < 0) return 0
+
+  // one-liner
+  // return Math.min(255, Math.max(0, hex + amount))
+}
+
+console.log(alterColor('000', 10)) 
