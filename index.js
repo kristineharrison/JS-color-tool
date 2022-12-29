@@ -23,7 +23,7 @@ hexInput.addEventListener('keyup', () => {
 
   const strippedHex = hex.replace("#", "")
 
-  inputColor.style.backgroundColor = "#" + strippedHex
+  inputColor.style.backgroundColor = `#${strippedHex}`
 })
 
 // Convert hex to rgb
@@ -79,3 +79,23 @@ const sliderText = document.getElementById("sliderText")
 slider.addEventListener('input', () => {
   sliderText.textContent = `${slider.value}%`
 })
+
+// Alter color by percentage
+// Create the alterColor function which accepts hex value and percentage
+// Increase each r, g, b value by appropriate amount (percentage of 255)
+// Use the new r, b, b values to convert to a hex value
+// Return the hex value
+
+const alterColor = (hex, percentage) => {
+  const {r, g, b} = convertHexToRGB(hex)
+
+  const amount = Math.floor((percentage/100) * 255) // Get integer between 0-255
+
+  // Create new RGB value by new amount
+  const newR = r + amount
+  const newG = g + amount
+  const newB = b + amount
+  return convertRGBToHex(newR, newG, newB)
+}
+
+console.log(alterColor('000', 10))
