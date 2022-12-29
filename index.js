@@ -67,3 +67,15 @@ const convertRGBToHex = (r, g, b) => {
   return hex
 }
 console.log(convertRGBToHex(255, 255, 255))
+
+// Display Percentage from Slider
+// Get reference to slider and sliderText DOM elements
+// Create an input event listener
+// Display value of the slider
+
+const slider = document.getElementById("slider")
+const sliderText = document.getElementById("sliderText")
+
+slider.addEventListener('input', () => {
+  sliderText.textContent = `${slider.value}%`
+})
