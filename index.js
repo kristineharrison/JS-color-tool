@@ -51,4 +51,19 @@ const convertHexToRGB = (hex) => {
   return {r, g, b} // shorthand of {r:r, g:g, b:b}
 }
 
-console.log(convertHexToRGB("fff"))
+// Convert RGB to Hex
+// Take in 3 parameters - r, g, and b
+// For each (r, g, b) create a hex pair that is two characters long
+// Return hex value starting with a hashtag
+// r.toString(16) will return a string or integer as hex value. Make sure two characters - so 0 will be 00
+
+const convertRGBToHex = (r, g, b) => {
+  // To ensure returns 2 character value, add a preceding 0, convert to hex, and return the last 2 digits
+  const hexR = ("0" + r.toString(16)).slice(-2)
+  const hexG = ("0" + g.toString(16)).slice(-2)
+  const hexB = ("0" + b.toString(16)).slice(-2)
+
+  const hex =  `#${hexR}${hexG}${hexB}`
+  return hex
+}
+console.log(convertRGBToHex(255, 255, 255))
