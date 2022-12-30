@@ -118,3 +118,24 @@ const increaseWithinRange = (hex, amount) => {
   // one-liner
   return Math.min(255, Math.max(0, hex + amount))
 }
+
+// Create custom toggle functionality
+// Get reference to lightenText, darkenText, toggleBtn
+// Add click event listener to the toggle btn
+// Only one of lighten or darken can be unselected at a time
+
+const lightenText = document.getElementById("lightenText")
+const darkenText = document.getElementById("darkenText")
+const toggleBtn = document.getElementById("toggleBtn")
+
+toggleBtn.addEventListener('click', () => {
+  if(toggleBtn.classList.contains('toggled')) {
+    toggleBtn.classList.remove('toggled')
+    lightenText.classList.remove('unselected')
+    darkenText.classList.add('unselected')
+  } else {
+    toggleBtn.classList.add('toggled')
+    lightenText.classList.add('unselected')
+    darkenText.classList.remove('unselected')
+  }
+})
