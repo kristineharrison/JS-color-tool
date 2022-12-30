@@ -85,8 +85,13 @@ slider.addEventListener('input', () => {
 
   sliderText.textContent = `${slider.value}%`
 
+  // Calculate the appropriate value for the color alteration between postive and negative. Toggled means slide to Darken side.
+  const valuePosNeg = toggleBtn.classList.contains('toggled')
+    ? -slider.value
+    : slider.value
+
   // Get the altered hex value
-  const alteredHex = alterColor(hexInput.value, slider.value) 
+  const alteredHex = alterColor(hexInput.value, valuePosNeg) 
   // Update the altered color
   alteredColor.style.backgroundColor = alteredHex
   alteredColorText.innerText = `Altered Color ${alteredHex}`
