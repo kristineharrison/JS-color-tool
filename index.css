@@ -41,3 +41,48 @@ input[type="text"] {
   background-color: #d6d5ac;
   margin-bottom: 25px;
 }
+
+ /* Style custom toggle button */
+ /* Display labels and toggle horizontally */
+ /* Style the toggle button as well as the inner circle using explicit sizing */
+ /* Define an unselected class that will de-emphasis the non-selected text */
+
+ .toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+ }
+
+.toggle-text {
+  font-size: 18px;
+}
+
+.toggle-btn {
+  width: 60px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.inner-circle {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  transition: all 250ms;
+}
+ 
+/* Add toggled class if toggle is toggled */
+/* If class is toggle-btn and toggled, apply to inner-circle class: */
+.toggle-btn.toggled > .inner-circle {
+  /* move to other side of toggle button */
+  transform: translateX(30px);
+  background-color: #333;
+}
+
+.unselected {
+  /* de-emphasis text when not selected */
+  opacity: 0.25;
+}
