@@ -24,6 +24,7 @@ hexInput.addEventListener('keyup', () => {
   const strippedHex = hex.replace("#", "")
 
   inputColor.style.backgroundColor = `#${strippedHex}`
+  reset()
 })
 
 // Convert hex to rgb
@@ -143,4 +144,18 @@ toggleBtn.addEventListener('click', () => {
     lightenText.classList.add('unselected')
     darkenText.classList.remove('unselected')
   }
+  reset()
 })
+
+// Create reset function when toggled back and forth
+// Set slider value to 0 and slider text to 0%
+// Reset alteredColorText to original inpu
+// Call reset in toggleBtn click handler
+// Call reset in hexInput keyup handler
+
+const reset = () => {
+  slider.value = 0
+  sliderText.innerText = '0%'
+  alteredColor.style.backgroundColor = hexInput.value
+  alteredColorText.innerText = `Altered Color ${hexInput.value}`
+}
