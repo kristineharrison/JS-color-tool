@@ -7,10 +7,17 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #3e4560;
   color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .container {
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
 }
 
 .title {
