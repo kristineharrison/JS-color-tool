@@ -44,8 +44,9 @@ input[type="text"] {
 
 .box {
   height: 100px;
-  width: 100%;
+  width: 75%;
   background-color: #d6d5ac;
+  margin-top: 10px;
   margin-bottom: 25px;
 }
 
