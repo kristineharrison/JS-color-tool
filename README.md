@@ -1,8 +1,8 @@
-# Scrimba Vanilla JS Color Tool Project
+# Vanilla JS Color Tool
 
 Build a cool color lighten/darken tool from scratch. Add custom CSS3 styling.
 
-Topics Covered:
+Features:
 * HTML5, CSS3, and JavaScript
 * DOM manipulation
 * Convert between Hex and RGB colors
