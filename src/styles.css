@@ -37,21 +37,8 @@ label {
 }
 
 /* INPUT*/
-.input-color {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  text-align: center;
-}
 input {
   margin-bottom: 25px;
-}
-
-input[type="text"] {
-  padding: 5px 10px;
-  border-radius: 3px;
-  border: none;
-  margin-top: 20px;
 }
 
 input[type="color"] {
@@ -60,6 +47,7 @@ input[type="color"] {
   border-radius: 3px;
   background-color: transparent;
   border: none;
+  text-align: middle;
 }
 
 /* COLOR BOX */

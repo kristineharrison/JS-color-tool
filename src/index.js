@@ -1,5 +1,6 @@
 const hexInput = document.getElementById("hexInput")
 const inputColor = document.getElementById("inputColor")
+const inputColorText = document.getElementById("inputColorText")
 const slider = document.getElementById("slider")
 const sliderText = document.getElementById("sliderText")
 const alteredColor = document.getElementById("alteredColor")
@@ -24,6 +25,7 @@ hexInput.addEventListener('keyup', () => {
   const strippedHex = hex.replace("#", "")
 
   inputColor.style.backgroundColor = `#${strippedHex}`
+  inputColorText.innerText = `Input Color ${hex}`
   reset()
 })
 
