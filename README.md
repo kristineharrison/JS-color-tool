@@ -1,6 +1,6 @@
-# Vanilla JS Color Tool
+# Interactive Color Value Tool
 
-Build a cool color lighten/darken tool from scratch. Add custom CSS3 styling.
+Build a color value lighten/darken tool utilizing HTML5, CSS3 and Vanilla JavaScript.
 
 Features:
 * HTML5, CSS3, and JavaScript
