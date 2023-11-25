@@ -12,3 +12,7 @@ Features:
 * Create a custom toggle button
 * parseInt, Math.min, and Math.max
 * Reset functionality
+
+WCAG compliant - no HTML or CSS warnings or errors
+https://validator.w3.org/
+

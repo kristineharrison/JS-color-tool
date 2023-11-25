@@ -1,16 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="/src/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+    <link rel="stylesheet" href="./src/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <title>Interactive Color Tool</title>
   </head>
   <body>
     <div class="container">
       <h1 class="title">Interactive Color Lighten or Darken Tool</h1>
-      
-      <!-- Input field for hex value -->
-      <label for="hex">Color (Hex)</label>
-      <input type="text" name="hex" id="hexInput" placeholder="#000000" value="#c6d5ac"/>
+      <p class="intro">Quickly find a new color value. <em>Value </em>refers to how light or dark a color is (light having a high value). Choose your color using the input field or color picker, select whether to lighten or darken it, and then use the percentage slider to view the new values.</p>
+      <!-- Input fields for hex value -->
+      <div class="input-color">
+        <div>
+          <label for="hexInput">Input a (Hex)Color</label>
+          <input type="text" name="hex" id="hexInput" placeholder="#000000" value="#c6d5ac">
+        </div>
+        <div>
+          <label for="hexInput">Pick a (Hex)Color</label>
+          <input type="color" name="hex" id="hexInput" placeholder="#000000" value="#c6d5ac">
+        </div>
+      </div>
       
       <!-- Custom toggle -->
       <div class="toggle">
@@ -23,7 +32,7 @@
 
       <!-- Percentage slider  -->
       <label for="slider" id="sliderText">0%</label>
-      <input type="range" min="0" max="100" value="0" class="slider" id="slider" name="slider"></input>
+      <input type="range" min="0" max="100" value="0" class="slider" id="slider" name="slider">
 
       <!-- Color display boxes -->
       <p>Input Color</p>
@@ -32,6 +41,6 @@
       <div id="alteredColor" class="box"></div>
     </div>
 
-    <script src="/src/index.js"></script>
+    <script src="./src/index.js"></script>
   </body>
 </html>

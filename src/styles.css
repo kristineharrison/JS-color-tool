@@ -26,12 +26,23 @@ body {
   color: #d6d5ac;
 }
 
+.intro {
+  margin: 20px 0 35px;
+}
+
 label {
   display: block;
   font-size: 20px;
   margin-bottom: 5px;
 }
 
+/* INPUT*/
+.input-color {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+}
 input {
   margin-bottom: 25px;
 }
@@ -40,8 +51,18 @@ input[type="text"] {
   padding: 5px 10px;
   border-radius: 3px;
   border: none;
+  margin-top: 20px;
 }
 
+input[type="color"] {
+  width: 10rem;
+  height: 5rem;
+  border-radius: 3px;
+  background-color: transparent;
+  border: none;
+}
+
+/* COLOR BOX */
 .box {
   height: 100px;
   width: 75%;
@@ -50,6 +71,7 @@ input[type="text"] {
   margin-bottom: 25px;
 }
 
+/* TOGGLE */
  .toggle {
   display: flex;
   align-items: center;
@@ -85,3 +107,4 @@ input[type="text"] {
 .unselected {
   opacity: 0.25;
 }
+
